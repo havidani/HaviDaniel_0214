@@ -6,7 +6,6 @@
 		{
 			List<Karakter> karakterek = [];
 			Beolvasas("karakterek.txt", karakterek);
-
 			foreach (var item in karakterek)
 			{
 				Console.WriteLine(item);
@@ -28,13 +27,19 @@
 
 				Karakter karakter = new (szavak[0], Convert.ToInt16(szavak[1]), Convert.ToInt16(szavak[2]), Convert.ToInt16(szavak[3]));
 				karakterek.Add(karakter);
-				karakter.Legnagyobbeletero(karakterek);
 			}
-			
-
-
-
-
+		}
+		static void Legnagyobbeletero(List<Karakter> karakterek)
+		{
+			int nagyeletero = 0;
+			foreach (var item in karakterek)
+			{
+				if (item.Eletero > nagyeletero)
+				{
+					nagyeletero = item.Eletero;
+				}
+			}
+			Console.WriteLine($"Név: {nev}, Szint: {szint}, Erő: {ero}");
 		}
 	}
 }

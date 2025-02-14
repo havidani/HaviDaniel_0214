@@ -25,21 +25,7 @@ namespace _0214
 		public int Szint { get => szint; set => szint = value; }
 		public int Eletero { get => eletero; set => eletero = value; }
 		public int Ero { get => ero; set => ero = value; }
-
-		public void Legnagyobbeletero(List<Karakter> karakterek)
-		{
-			int nagyeletero = eletero;
-			foreach (var item in karakterek)
-			{
-				
-				if (eletero > nagyeletero)
-				{
-					nagyeletero = eletero;
-
-				}
-			}
-		}
-
+		
 		public override string? ToString()
 		{
 			return $"{nev} - {szint} / {eletero} / {ero} /";
